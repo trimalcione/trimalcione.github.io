@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+<defs>
+  <link href="../css/logoOKC.css" type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml"/>
+</defs>
+<g id="K">
+	<polygon id="K-up" points="182.244,252 130.244,252 249.756,45 301.756,45"/>
+	<polygon id="K-down" points="249.756,459 301.756,459 182.244,252 130.244,252"/>
+	<rect id="K-stick" x="130" y="45" width="52" height="414"/>
+</g>
+<path id="C" class="letters-with-stroke" d="M405.232,415.618
+	C277.718,391.701,186.333,327.029,186.333,251c0-75.553,90.244-139.891,216.509-164.164"/>
+<circle id="O" class="letters-with-stroke animated" cx="250.333" cy="251.833" r="227.5" />
+
+</svg>

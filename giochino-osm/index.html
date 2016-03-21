@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<title>iNsulto</title>
+		<meta charset="utf-8">
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	    
+	    <link href="css/main.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="foto-vittima">
+		<h1 style="margin-top:0">Seleziona lo schifoso da insultare!</h1>
+			<img src="" style="display:none" />
+		</div>
+		<div class="selezione-vittima">
+			<label for="scegli-vittima">Scegli la vittima: </label>
+			<select id="scegli-vittima" name="scegli-vittima">
+				<option selected disabled hidden value=''></option>
+	  			<option value="cascio">mauricecarrozzieri</option>
+	  			<option value="cesare">Ciccio Calvizia</option>
+	  			<option value="cozzi">claudio920</option>
+				<option value="ermanno">ErmannoBomber</option>  
+	  			<option value="fabio">Fabioelgordito</option>
+	  			<option value="giannazz">giannazz</option>
+	  			<option value="johnny">Johnny Sack</option>
+	  			<option value="marci">marciui</option>
+	  			<option value="matteo">Matteo Loverro</option>
+	  			<option value="miki">MichelangeloD10</option>
+	  			<option value="vass">Mr White 2000</option>
+	  			<option value="nicolo">nicològk</option>
+	  			<option value="nikilosi">nikilosi</option>
+	  			<option value="omino">primavomitopoibevo</option>
+	  			<option value="paolo">RoBOTtone l Amicone</option>
+	  			<option value="pansini">AdrianoLoverro</option>
+	  			<option value="sacha">Ing Esse</option>
+	  			<option value="sengo">JoSengol</option>
+	  			<option value="sexalex">Sexalex</option>
+	  			<option value="surgo">marcosu90</option>
+			</select>
+		</div>
+		<audio id="cesso" src="sounds/cesso.mp3"></audio>
+		<audio id="cogl" src="sounds/cogl.mp3"></audio>
+		<audio id="fai-schifo" src="sounds/fai-schifo.mp3"></audio>
+		<audio id="fanc" src="sounds/fanc.mp3"></audio>
+		<audio id="non-best" src="sounds/non-best.mp3"></audio>
+		<audio id="pezzo-di-m" src="sounds/pezzo-di-m.mp3"></audio>
+		<audio id="schifo-al-c" src="sounds/schifo-al-c.mp3"></audio>
+		<audio id="testa-di-m" src="sounds/testa-di-m.mp3"></audio>
+		<audio id="vergogna" src="sounds/vergogna.mp3"></audio>
+		<audio id="vigliacco" src="sounds/vigliacco.mp3"></audio>
+
+		<div class="selezione-insulto">
+			
+  			<input type="button" class="button-insulto" name="cesso" value="Cesso" onclick="document.getElementById('cesso').play()" />
+  			<input type="button" class="button-insulto" name="cogl" value="Coglione" onclick="document.getElementById('cogl').play()" />
+			<input type="button" class="button-insulto" name="fai-schifo" value="Fai schifo" onclick="document.getElementById('fai-schifo').play()" />
+  			<input type="button" class="button-insulto" name="fanc" value="Fanculo" onclick="document.getElementById('fanc').play()" />
+			<input type="button" class="button-insulto" name="non-best" value="Non bestemmiare" onclick="document.getElementById('non-best').play()" />
+  			<input type="button" class="button-insulto" name="pezzo-di-m" value="Pezzo di merda" onclick="document.getElementById('pezzo-di-m').play()" />
+			<input type="button" class="button-insulto" name="schifo-al-c" value="Schifo al cazzo" onclick="document.getElementById('schifo-al-c').play()" />
+  			<input type="button" class="button-insulto" name="testa-di-m" value="Testa di maiale" onclick="document.getElementById('testa-di-m').play()" />
+			<input type="button" class="button-insulto" name="vergogna" value="Ma non ti vergogni?" onclick="document.getElementById('vergogna').play()" />
+  			<input type="button" class="button-insulto" name="vigliacco" value="Vigliacco" onclick="document.getElementById('vigliacco').play()" />
+			
+		</div>
+		<div class="wrapper">
+			<div id="rank" class="foto-vittima">
+				<p>Classifica</p>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>Posizione</th>
+						<th>Idiota</th>
+						<th>Insulti ricevuti</th>
+					</tr>
+				</thead>
+				<tbody class="rank-body">
+					
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	</head>
+	<body>
+		<div class="title">
+			<h1>Generatore casuale di titoli Vice</h1>
+			<h2>Facciamo più schifo di "Cioè"</h2>
+		</div>
+		<hr />
+		<div id="titolo">
+			<h1>Lorem Ipsum</h1>
+		</div>
+		<hr />
+		<button id="genera-titolo" type="button">Genera un altro titolo</button>
+		<hr />
+	</body>
+
+	<script type="text/javascript">
+		var titoli = [
+				"Vi spieghiamo perché correre nudi in autostrada in contromano non è una buona idea.",
+				"Abbiamo intervistato un uomo che si è messo uno sgombro nel naso.",
+				"Siamo andati al cinema bendati, per vedere un film muto."
+			],
+			titoliCopia = [];
+		
+		function rand(x) {
+			return Math.floor(Math.random() * x.length);
+		}
+
+		$(document).ready(function() {
+			titoliCopia = titoliCopia.concat(titoli);
+			var i = rand(titoliCopia);
+		   	$("#titolo h1").text(titoliCopia[i]);
+			titoliCopia.splice(i,1);
+
+			$("#genera-titolo").click(function() {
+		    	if(titoliCopia.length <= 0) {
+		    		titoliCopia = titoliCopia.concat(titoli);
+		    	}
+		    	i = rand(titoliCopia);
+			   	$("#titolo h1").text(titoliCopia[i]);
+				titoliCopia.splice(i,1);
+		    });
+		});
+	</script>
+</html>
+

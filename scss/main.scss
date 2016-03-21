@@ -1,0 +1,80 @@
+@import 'scss/logoOKC';
+
+
+@mixin transition($x1, $time1, $trans1, $x2, $time2, $trans2) {
+    -webkit-transition: $x1 $time1 $trans1, $x2 $time2 $trans2;
+    -moz-transition: $x1 $time1 $trans1, $x2 $time2 $trans2;
+    -o-transition: $x1 $time1 $trans1, $x2 $time2 $trans2;
+    	transition: $x1 $time1 $trans1, $x2 $time2 $trans2;
+}
+
+@mixin animation($anim, $t, $trans, $delay) {
+	-webkit-animation: $anim $t $trans;
+    -moz-animation: $anim $t $trans;
+    -o-animation: $anim $t $trans;
+    	animation: $anim $t $trans;
+  	-webkit-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -o-animation-delay: $delay;
+    	animation-delay: $delay;
+}
+
+@keyframes translateTop {
+	0% {
+		/*transform: translate(0%,-50%);*/
+		width: 100%;
+	}
+
+	100%{
+		/*transform: translate(0%,-50%);*/
+		width: 120px;
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		height: 100%;
+	}
+	100% {
+		height: 140px;
+	}
+}
+
+body, html {
+	font-family: monospace;
+	font-size: 16px;
+	margin:0;
+	width:100%;
+	background: logo-palette(green,'xxxxlight');
+}
+
+object {
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	display:block;
+  	-webkit-transform: translate(0%, 0%);
+  	        transform: translate(0%, 0%);
+    @include transition (width, 1s, ease-in-out, left, 1.5s, ease-in-out);
+    @include animation (translateTop, 1s, ease-in-out, 2.5s);
+    animation-fill-mode: forwards; //transizione rimane ferma all'ultimo frame
+}
+
+#logo {
+	background-color: #0B3C49;
+	height: auto;
+	@include animation (slideUp, 1s, ease-in-out, 2.5s);
+    animation-fill-mode: forwards; //transizione rimane ferma all'ultimo frame
+}
+
+.main {
+	text-align:center;
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.engine {
+	fill:#86E2D5;
+	stroke: #019875;
+	stroke-width: 2;
+}
